@@ -1,0 +1,103 @@
+page {
+  background-color: #FFF7FA;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.page-wrap {
+  padding-bottom: 120rpx;
+}
+
+/* 通用卡片复用全局.card样式 */
+.head-card {
+  text-align: center;
+  padding: 50rpx 20rpx;
+}
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  background: #FFE6EF;
+  border-radius: 50%;
+  font-size: 60rpx;
+  line-height: 140rpx;
+  margin: 0 auto 20rpx;
+}
+.user-title {
+  font-size: 36rpx;
+  color: #444;
+  font-weight: 500;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #FFE6EF;
+}
+.item-row:last-child {
+  border-bottom: none;
+}
+.label {
+  font-size: 29rpx;
+  color: #666;
+}
+.value {
+  font-size: 29rpx;
+  color: #c2607c;
+}
+
+.card-title {
+  font-size: 32rpx;
+  color: #444;
+  margin-bottom: 25rpx;
+  font-weight: 500;
+}
+.intro-text {
+  font-size: 28rpx;
+  line-height: 1.8;
+  color: #555;
+}
+
+.back-btn {
+  margin-top: 60rpx;
+  height: 90rpx;
+  font-size: 32rpx;
+}
+.privacy-box{
+  text-align: center;
+  margin-top: 40rpx;
+}
+.privacy-text{
+  font-size: 26rpx;
+  color: #FF89A9;
+  text-decoration: underline;
+}
+.privacy-wrap{
+  margin-top: 40rpx;
+}
+.privacy-state{
+  font-size: 28rpx;
+  margin-bottom: 25rpx;
+}
+.privacy-btn-row{
+  display: flex;
+  gap: 20rpx;
+}
+.privacy-btn{
+  flex: 1;
+  font-size: 26rpx;
+  border: 1rpx solid #FFC8D8;
+  color: #FF89A9;
+  background: #fff;
+  border-radius: 40rpx;
+}
+.reset-btn{
+  flex: 1;
+  font-size: 26rpx;
+  border: 1rpx solid #ddd;
+  color: #666;
+  background: #fff;
+  border-radius: 40rpx;
+}
+.privacy-btn::after,.reset-btn::after{
+  border: none;
+}

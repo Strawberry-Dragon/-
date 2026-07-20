@@ -1,0 +1,52 @@
+<view wx:if="{{showPrivacy}}" class="mask">
+  <view class="modal">
+    <view class="title">隐私保护提示</view>
+    <view class="content">
+使用本温柔日记本前，请阅读《隐私保护指引》：本小程序仅在您主动操作时存储日记文字与自选配图，相册、摄像头仅用于添加日记图片，所有数据存储于您微信本地，不会私自收集、上传您的隐私信息。
+      <text style="color:#ff7b9c;text-decoration:underline" bindtap="openPrivacy">查看完整隐私协议</text>
+    </view>
+    <view class="btn-row">
+      <button bindtap="refuse">拒绝使用</button>
+      <button bindtap="agree">同意并继续</button>
+    </view>
+  </view>
+</view>
+
+<!-- 正常首页内容 -->
+<!-- 日记列表 -->
+<scroll-view scroll-y class="list-box">
+    <view wx:for="{{ diaryList }}" wx:key="id" class="diary-card card" bindtap="goDetail" data-id="{{ item.id }}">
+      <view class="diary-time">{{ item.time }}</view>
+      <view class="diary-title">{{ item.title }}</view>
+      <view class="diary-preview">{{ item.content.substring(0, 35) }}...</view>
+      <!-- 有图就展示缩略图 -->
+      <view wx:if="{{ item.imgList.length > 0 }}" class="img-preview-wrap">
+        <image src="{{ item.imgList[0] }}" class="preview-img" mode="aspectFill"></image>
+      </view>
+    </view>
+  </scroll-view>
+
+  <button 
+  class="add-btn btn-pink" 
+  bindtap="goAddDiary" 
+  style="position: fixed; left: 296rpx; top: 1200rpx; width: 160rpx; height: 80rpx; border-radius: 16rpx; display: flex; align-items: center; justify-content: center; padding: 0; border: none; margin: 0; background: #ff7eb9; font-size: 28rpx; color: #ffffff"
+>
+  +新日记
+</button>
+<!-- 公告弹窗 -->
+<!-- 更新公告弹窗 -->
+<view wx:if="{{showNotice}}" class="mask">
+  <view class="notice-box">
+    <view class="notice-title">📢 版本更新公告</view>
+    <view class="notice-content">
+      【本次更新内容】
+      1、新增零散日记论坛，都可以在此匿名发送漂流瓶式日记
+      2、最多可上传9张配图记录日常
+      3、移除隐私撤回功能，隐私同意后永久生效
+      4、本日记数据只会存储在本地，一旦更换手机或者删除小程序本日记一切数据都会被删除，后续会更新手动备份导入版
+      5、新增版本更新公告提醒
+      
+    </view>
+    <button bindtap="closeNotice" class="notice-btn">我知道了</button>
+  </view>
+</view>

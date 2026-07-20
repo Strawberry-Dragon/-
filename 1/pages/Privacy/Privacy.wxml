@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="status-card">
+    <text class="title">当前隐私协议授权状态</text>
+    <view class="state-line">
+      <text>状态：</text>
+      <text wx:if="{{isAgree}}" class="agree-text">已同意隐私协议</text>
+      <text wx:else class="disagree-text">未同意隐私协议</text>
+    </view>
+  </view>
+
+  <button bindtap="openPrivacy" class="btn" style="position: relative; left: -195rpx; top: 929rpx; width: 324rpx; display: block; box-sizing: border-box; height: 99rpx">查看完整隐私保护指引</button>
+  <button bindtap="goBack" class="btn back" style="position: relative; left: 210rpx; top: 752rpx; width: 293rpx; display: block; box-sizing: border-box; height: 99rpx">返回上一页
+    ५꒰۶⁎⁼̴̀ω⁼̴́⁎꒱۶</button>
+</view>

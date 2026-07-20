@@ -1,0 +1,52 @@
+{
+  "lazyCodeLoading": "requiredComponents",
+  "pages": [
+    "pages/index/index",
+    "pages/addDiary/addDiary",
+    "pages/detail/detail",
+    "pages/about/about",
+    "pages/Privacy/Privacy",
+    "pages/luntan/luntan"
+ 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFD6E0",
+    "navigationBarTitleText": "温柔日记本",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFF7FA"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#FF89A9",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "日记首页"
+      },
+      {
+        "pagePath": "pages/luntan/luntan",
+        "text": "零散日记"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于我的"
+      }
+     
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "__usePrivacyCheck__": true,
+  "mp-weixin":{
+    "permission": {
+      "scope.camera": {
+        "desc": "用于拍摄日记配图"
+      },
+      "scope.album": {
+        "desc": "用于从相册选择日记配图"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,61 @@
+<view class="page-wrap">
+  <!-- 顶部头像卡片 -->
+  <view class="card head-card">
+    <view class="avatar">📔</view>
+    <view class="user-title">我的日记账户</view>
+  </view>
+
+  <!-- 账户统计信息 -->
+  <view class="card info-card">
+    <view class="item-row">
+      <text class="label">日记总篇数</text>
+      <text class="value">{{ diaryTotal }} 篇</text>
+    </view>
+    <view class="item-row">
+      <text class="label">首次记录时间</text>
+      <text class="value">{{ firstTime || "暂无日记" }}</text>
+    </view>
+    <view class="item-row">
+      <text class="label">最近更新时间</text>
+      <text class="value">{{ lastTime || "暂无日记" }}</text>
+    </view>
+  </view>
+
+  <!-- 小程序版本介绍 -->
+  <view class="card intro-card">
+    <view class="card-title">小程序介绍</view>
+    <text class="intro-text">
+      ✨ 温柔日记本是一款轻量生活记录小程序
+      可以随手写下日常心情、生活碎碎念，支持插入多张照片留存美好瞬间。
+      所有数据本地存储，保护你的私密情绪，简单治愈，记录每一天的小温柔。✨
+    </text>
+  </view>
+
+  <!-- 版本信息 -->
+  <view class="card version-card">
+    <view class="item-row">
+      <text class="label">当前版本</text>
+      <text class="value">V1.0.0</text>
+    </view>
+    <view class="item-row">
+      <text class="label">开发风格</text>
+      <text class="value">温柔治愈可爱风</text>
+    </view>
+    <view class="item-row">
+      <text class="label">隐私协议</text>
+      <button class="value" style="position: relative; left: 175rpx; top: 0rpx; width: 227rpx; display: block; box-sizing: border-box" bindtap="goPrivacy">查看状态</button>
+    </view>
+    <view class="item-row">
+      <text class="label">公告信息</text>
+      <button class="value" style="position: relative; left: 175rpx; top: 0rpx; width: 231rpx; display: block; box-sizing: border-box" bindtap="openNoticeManual">查看版本更新公告</button>
+    </view>
+  </view>
+
+  
+  <!-- 返回首页按钮 -->
+  <button class="back-btn btn-pink" bindtap="backHome">返回日记首页</button>
+</view>
+<!-- 原有页面代码不动，末尾追加 -->
+<view class="privacy-box">
+  <text class="privacy-text" bindtap="openPrivacy">《隐私保护指引》</text>
+</view>

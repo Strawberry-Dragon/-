@@ -1,0 +1,15 @@
+<view wx:if="{{ diary }}" class="container">
+  <view class="card">
+    <view class="detail-time">{{ diary.time }}</view>
+    <view class="detail-title">{{ diary.title }}</view>
+    <view class="detail-content">{{ diary.content }}</view>
+
+    <view wx:if="{{ diary.imgList.length > 0 }}" class="img-wrap">
+      <view wx:for="{{ diary.imgList }}" wx:key="*this" class="img-item">
+        <image src="{{ item }}" class="pic" mode="aspectFill" bindtap="previewImg" data-src="{{ item }}"></image>
+      </view>
+    </view>
+  </view>
+
+  <button class="del-btn" bindtap="deleteDiary">删除这篇日记</button>
+</view>

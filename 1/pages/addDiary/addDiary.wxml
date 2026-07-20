@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="card">
+    <view class="label">日记标题</view>
+    <input class="input-box title-input" placeholder="给今天起一个温柔小标题~" bindinput="inputTitle" value="{{ title }}"/>
+  </view>
+
+  <view class="card">
+    <view class="label">日记内容</view>
+    <textarea class="input-box content-input" maxlength="50000" class="input-box content-input" placeholder="慢慢写下今天的小事、心情、碎碎念..." bindinput="inputContent" value="{{ content }}"></textarea>
+  </view>
+
+  <view class="card">
+    <view class="label">配图（最多9张）</view>
+    <view class="img-box">
+      <view wx:for="{{ imgList }}" wx:key="*this" class="img-item">
+        <image src="{{ item }}" class="pic" mode="aspectFill" bindtap="previewImg" data-src="{{ item }}"></image>
+        <view class="del-icon" bindtap="delImg" data-index="{{ index }}">×</view>
+      </view>
+      <view wx:if="{{ imgList.length < 9 }}" class="add-pic-btn" bindtap="chooseImage">
+        <text>+</text>
+      </view>
+    </view>
+  </view>
+
+  <button class="save-btn btn-pink" bindtap="saveDiary">保存日记 💌</button>
+</view>
